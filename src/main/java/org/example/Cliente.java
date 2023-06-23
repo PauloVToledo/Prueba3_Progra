@@ -41,24 +41,62 @@ public class Cliente {
 	}
 
 	public Cliente(String nombre, String apellido, String correoElectronico, String numeroContacto, String estadoCivil, String ciudad) {
-		throw new UnsupportedOperationException();
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.correoElectronico = correoElectronico;
+		this.numeroContacto = numeroContacto;
+		this.estadoCivil = estadoCivil;
+		this.ciudad = ciudad;
 	}
 
-	public ArrayList<DispositivoTecnologico> buscarDispotivoPorMarca(String marca) {
-		throw new UnsupportedOperationException();
+	public ArrayList<DispositivoTecnologico> buscarDispositivoPorMarca(String marca) {
+		ArrayList<DispositivoTecnologico> dispositivosEncontrados = new ArrayList<>();
+
+		for (DispositivoTecnologico dispositivo : dispositivo) {
+			if (dispositivo.getMarca().equals(marca)) {
+				dispositivosEncontrados.add(dispositivo);
+			}
+		}
+
+		return dispositivosEncontrados;
 	}
 
-	public ArrayList<DispositivoTecnologico> buscarDispotivoPorModelo(String modelo) {
-		throw new UnsupportedOperationException();
+	public ArrayList<DispositivoTecnologico> buscarDispositivoPorModelo(String modelo) {
+		ArrayList<DispositivoTecnologico> dispositivosEncontrados = new ArrayList<>();
+
+		for (DispositivoTecnologico dispositivo : dispositivo) {
+			if (dispositivo.getModelo().equals(modelo)) {
+				dispositivosEncontrados.add(dispositivo);
+			}
+		}
+
+		return dispositivosEncontrados;
 	}
 
-	public ArrayList<DispositivoTecnologico> buscarDispotivoPorTipo(String tipo) {
-		throw new UnsupportedOperationException();
+	public ArrayList<DispositivoTecnologico> buscarDispositivoPorTipo(String tipo) {
+		ArrayList<DispositivoTecnologico> dispositivosEncontrados = new ArrayList<>();
+
+		for (DispositivoTecnologico dispositivo : dispositivo) {
+			if (dispositivo.getTipo().equals(tipo)) {
+				dispositivosEncontrados.add(dispositivo);
+			}
+		}
+
+		return dispositivosEncontrados;
 	}
+
 
 	public void informacionDetalladaDispositivo() {
-		throw new UnsupportedOperationException();
+		for (DispositivoTecnologico dispositivo : dispositivo) {
+			System.out.println("Marca: " + dispositivo.getMarca());
+			System.out.println("Modelo: " + dispositivo.getModelo());
+			System.out.println("Tipo: " + dispositivo.getTipo());
+			System.out.println("Descripción: " + dispositivo.getDescripcion());
+			System.out.println("Precio: " + dispositivo.getPrecio());
+			System.out.println("----------------------");
+		}
 	}
+
 
 	public CharSequence getDireccion() {
 		return getDireccion();

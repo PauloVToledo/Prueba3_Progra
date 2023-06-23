@@ -54,4 +54,8 @@ public abstract class DispositivoTecnologico {
 	public CharSequence getNombre() {
 		return getNombre();
 	}
+
+	public String getDescripcion() {
+		return getDescripcion();
+	}
 }
