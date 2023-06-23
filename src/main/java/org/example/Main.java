@@ -1,8 +1,14 @@
 package org.example;
 
 public class Main {
-    public static void main(String[] args) {
+    public void main(String[] args) {
         System.out.println("Hello world!");
+        inicializarTiendaElectronica();
     }
-}
+
 //Posible Menú.
+
+public void inicializarTiendaElectronica(){ //Llamar métodos principales.
+
+}
+}
