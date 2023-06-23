@@ -59,4 +59,8 @@ public class Cliente {
 	public void informacionDetalladaDispositivo() {
 		throw new UnsupportedOperationException();
 	}
+
+	public CharSequence getDireccion() {
+		return getDireccion();
+	}
 }

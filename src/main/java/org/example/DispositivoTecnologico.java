@@ -50,4 +50,8 @@ public abstract class DispositivoTecnologico {
 	}
 
 	public abstract String getTipo();
+
+	public CharSequence getNombre() {
+		return getNombre();
+	}
 }
